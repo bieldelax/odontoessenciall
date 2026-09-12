@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Odonto Essencial — Odontologia em Guarulhos</title>
+<meta name="description" content="Odonto Essencial: excelência em reabilitação oral e estética facial. Clínica geral, estética, endodontia, prótese, implantes e mais em Serodio, Guarulhos.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #F4F7F2;
+    --bg-alt: #EDF1EA;
+    --ink: #1B211C;
+    --ink-soft: #4A544C;
+    --pine: #24392E;
+    --pine-deep: #17251D;
+    --gold: #AD8A46;
+    --gold-soft: #D9C89A;
+    --card: #FFFFFF;
+    --whatsapp: #22C35E;
+    --line: rgba(27,33,28,0.12);
+    --shadow-none: none;
+    --radius-img: 2px;
+    --maxw: 1180px;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Manrope', sans-serif;
+    font-size:16px;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%; display:block;}
+  a{color:inherit;}
+  h1,h2,h3{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    line-height:1.08;
+    margin:0;
+    letter-spacing:-0.01em;
+  }
+  p{margin:0;}
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 28px;}
+  @media(max-width:640px){ .wrap{padding:0 20px;} }
+
+  /* ---------- Buttons ---------- */
+  .btn{
+    display:inline-flex; align-items:center; gap:10px;
+    padding:15px 26px;
+    font-family:'Manrope',sans-serif;
+    font-weight:700;
+    font-size:15px;
+    text-decoration:none;
+    border-radius:3px;
+    border:1.5px solid transparent;
+    cursor:pointer;
+    transition:transform .18s ease, background-color .18s ease, border-color .18s ease, color .18s ease;
+    white-space:nowrap;
+  }
+  .btn:hover{transform:translateY(-2px);}
+  .btn-primary{ background:var(--pine); color:#F4F7F2; }
+  .btn-primary:hover{ background:var(--pine-deep); }
+  .btn-ghost{ background:transparent; color:var(--ink); border-color:var(--ink); }
+  .btn-ghost:hover{ border-color:var(--gold); color:var(--gold); }
+  .btn-gold{ background:var(--gold); color:#1B211C; }
+  .btn-gold:hover{ background:#957038; }
+  .btn-wa{ background:var(--whatsapp); color:#0d2b18; }
+  .btn-wa:hover{ background:#1ba851; }
+  .btn svg{width:18px; height:18px; flex-shrink:0;}
+
+  /* ---------- Header ---------- */
+  header{
+    position:sticky; top:0; z-index:50;
+    background:rgba(244,247,242,0.92);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:16px 0;
+  }
+  .brand{display:flex; align-items:center; gap:10px; text-decoration:none; color:var(--ink);}
+  .brand-mark{width:34px; height:34px; flex-shrink:0;}
+  .brand-name{font-family:'Fraunces',serif; font-weight:600; font-size:19px; letter-spacing:0.01em;}
+  .brand-name span{display:block; font-family:'Manrope',sans-serif; font-weight:500; font-size:9.5px; letter-spacing:0.14em; color:var(--gold); margin-top:1px;}
+  .nav-links{display:flex; align-items:center; gap:34px; list-style:none; margin:0; padding:0;}
+  .nav-links a{text-decoration:none; font-weight:600; font-size:14.5px; color:var(--ink-soft); transition:color .15s ease;}
+  .nav-links a:hover{color:var(--pine);}
+  .nav-cta{display:flex; align-items:center; gap:18px;}
+  .burger{display:none; background:none; border:none; cursor:pointer; padding:6px;}
+  .burger span{display:block; width:24px; height:2px; background:var(--ink); margin:5px 0;}
+
+  @media(max-width:900px){
+    .nav-links{display:none;}
+    .burger{display:block;}
+  }
+
+  /* ---------- Hero ---------- */
+  .hero{padding:64px 0 0;}
+  .hero-grid{
+    display:grid; grid-template-columns:1.05fr 0.95fr; gap:56px; align-items:center;
+  }
+  .hero h1{font-size:clamp(34px,4.4vw,54px); color:var(--pine);}
+  .hero-sub{margin-top:22px; font-size:17.5px; color:var(--ink-soft); max-width:46ch;}
+  .hero-actions{display:flex; gap:14px; flex-wrap:wrap; margin-top:34px;}
+  .trust-line{
+    margin-top:30px; padding-top:22px; border-top:1px solid var(--line);
+    display:flex; gap:10px; flex-wrap:wrap; align-items:center;
+    font-size:13.5px; color:var(--ink-soft);
+  }
+  .trust-line b{color:var(--ink); font-weight:700;}
+  .dot{color:var(--gold); font-weight:700;}
+
+  .hero-photo{position:relative;}
+  .hero-photo img{
+    width:100%; height:560px; object-fit:cover; object-position:center 20%;
+    border-radius:2px;
+    background:#e2e8e0;
+  }
+  .hero-card{
+    position:absolute; left:-22px; bottom:-22px;
+    background:var(--card);
+    padding:20px 24px;
+    max-width:250px;
+    border:1px solid var(--line);
+    box-shadow:0 18px 40px -20px rgba(23,37,29,0.35);
+  }
+  .hero-card p{font-size:13px; color:var(--ink-soft); margin-bottom:6px;}
+  .hero-card strong{font-family:'Fraunces',serif; font-size:15px; font-weight:600; display:block;}
+  @media(max-width:900px){
+    .hero-grid{grid-template-columns:1fr; gap:40px;}
+    .hero-photo img{height:380px;}
+    .hero-card{left:0; bottom:-20px; max-width:none; width:calc(100% - 40px);}
+    .hero{padding-top:44px;}
+  }
+
+  /* ---------- Marquee ---------- */
+  .marquee-strip{
+    margin-top:78px;
+    border-top:1px solid var(--line); border-bottom:1px solid var(--line);
+    overflow:hidden; white-space:nowrap; background:var(--bg-alt);
+  }
+  @media(max-width:900px){ .marquee-strip{margin-top:56px;} }
+  .marquee-track{
+    display:inline-flex; align-items:center;
+    animation:scroll 38s linear infinite;
+    padding:15px 0;
+  }
+  .marquee-track span{
+    font-size:13.5px; font-weight:600; color:var(--ink-soft);
+    padding:0 22px; border-right:1px solid var(--line);
+  }
+  @keyframes scroll{ from{transform:translateX(0);} to{transform:translateX(-50%);} }
+
+  /* ---------- Section generic ---------- */
+  section{padding:108px 0;}
+  @media(max-width:900px){ section{padding:70px 0;} }
+  .section-head{
+    display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:end;
+    margin-bottom:56px;
+  }
+  .section-head h2{font-size:clamp(28px,3.4vw,40px); color:var(--pine);}
+  .section-head p{color:var(--ink-soft); font-size:16px; max-width:42ch;}
+  @media(max-width:760px){
+    .section-head{grid-template-columns:1fr; gap:16px;}
+  }
+
+  /* ---------- Especialidades (accordion) ---------- */
+  .specialties{display:grid; grid-template-columns:1.2fr 0.8fr; gap:60px; align-items:start;}
+  @media(max-width:960px){ .specialties{grid-template-columns:1fr;} }
+
+  .accordion-item{border-top:1px solid var(--line);}
+  .accordion-item:last-child{border-bottom:1px solid var(--line);}
+  .accordion-btn{
+    width:100%; display:flex; align-items:center; justify-content:space-between; gap:20px;
+    background:none; border:none; text-align:left; cursor:pointer;
+    padding:22px 4px; font-family:'Fraunces',serif; font-size:20px; font-weight:600; color:var(--ink);
+    transition:color .2s ease;
+  }
+  .accordion-btn:hover{color:var(--pine);}
+  .accordion-btn .idx{font-family:'Manrope',sans-serif; font-size:12.5px; font-weight:700; color:var(--gold); margin-right:14px;}
+  .accordion-btn .plus{
+    width:22px; height:22px; position:relative; flex-shrink:0;
+  }
+  .accordion-btn .plus::before, .accordion-btn .plus::after{
+    content:''; position:absolute; background:var(--pine); top:50%; left:50%;
+    transform:translate(-50%,-50%);
+  }
+  .accordion-btn .plus::before{width:16px; height:2px;}
+  .accordion-btn .plus::after{width:2px; height:16px; transition:transform .25s ease;}
+  .accordion-item.open .plus::after{transform:translate(-50%,-50%) rotate(90deg) scaleY(0);}
+
+  .accordion-panel{
+    max-height:0; overflow:hidden; transition:max-height .35s ease;
+  }
+  .accordion-panel-inner{padding:0 4px 28px 46px;}
+  .accordion-panel-inner ul{margin:0 0 16px; padding:0; list-style:none; display:grid; grid-template-columns:1fr 1fr; gap:8px 24px;}
+  .accordion-panel-inner li{
+    font-size:14.5px; color:var(--ink-soft); padding-left:16px; position:relative;
+  }
+  .accordion-panel-inner li::before{
+    content:''; position:absolute; left:0; top:9px; width:6px; height:6px; background:var(--gold);
+  }
+  @media(max-width:520px){ .accordion-panel-inner ul{grid-template-columns:1fr;} }
+
+  .feature-card{
+    background:var(--card); border:1px solid var(--line); position:sticky; top:100px;
+    box-shadow:0 12px 32px -15px rgba(27,33,28,0.12);
+  }
+  .feature-card img{width:100%; height:230px; object-fit:cover; background:#e2e8e0;}
+  .feature-card-body{padding:26px 28px 30px;}
+  .feature-card-body .kicker{font-size:12.5px; font-weight:700; letter-spacing:0.06em; color:var(--gold); text-transform:uppercase;}
+  .feature-card-body h3{font-size:22px; margin-top:8px; color:var(--pine);}
+  .feature-card-body p{margin-top:12px; font-size:14.5px; color:var(--ink-soft); line-height:1.6;}
+  .feature-card-body .btn{margin-top:18px; padding:11px 20px; font-size:13.5px;}
+
+  /* ---------- Transformações (dark) ---------- */
+  .dark-section{background:var(--pine); color:#EFEDE3;}
+  .dark-section .section-head h2{color:#F4EFDD;}
+  .dark-section .section-head p{color:#C7D2C7;}
+
+  .transform-grid{display:grid; grid-template-columns:1.25fr 1fr; gap:26px; align-items:start;}
+  @media(max-width:900px){ .transform-grid{grid-template-columns:1fr;} }
+  .transform-mini-grid{display:grid; grid-template-columns:1fr 1fr; gap:16px;}
+
+  .compare{
+    position:relative; overflow:hidden; user-select:none; aspect-ratio:499/586; cursor:ew-resize;
+    border:1px solid rgba(217,200,154,0.35); background:#17251D;
+  }
+  .compare img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; pointer-events:none;}
+  .compare .after-img{clip-path: inset(0 0 0 50%);}
+  .compare-handle{
+    position:absolute; top:0; bottom:0; left:50%; width:0;
+    transform:translateX(-50%); pointer-events:none;
+  }
+  .compare-handle::before{
+    content:''; position:absolute; top:0; bottom:0; left:0; width:2px; background:var(--gold-soft);
+  }
+  .compare-handle::after{
+    content:'↔'; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+    width:44px; height:44px; border-radius:50%; background:var(--gold-soft); color:var(--pine-deep);
+    display:flex; align-items:center; justify-content:center; font-size:18px; font-weight:700;
+    box-shadow:0 6px 20px rgba(0,0,0,0.35);
+  }
+  .compare-tag{
+    position:absolute; z-index:3; font-size:11px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase;
+    padding:6px 11px; background:rgba(23,37,29,0.75); color:#EFEDE3; top:14px; pointer-events:none;
+  }
+  .compare-tag.before{left:14px;}
+  .compare-tag.after{right:14px;}
+  .compare-caption{margin-top:14px; font-size:13.5px; color:#C7D2C7;}
+  .compare-caption strong{color:#F4EFDD; font-weight:700;}
+
+  .static-photo{border:1px solid rgba(217,200,154,0.25); overflow:hidden; background:#1b2a22;}
+  .static-photo img{width:100%; height:100%; object-fit:cover; aspect-ratio:1/1; transition:transform .3s ease;}
+  .static-photo:hover img{transform:scale(1.03);}
+  .static-photo-cap{margin-top:8px; font-size:12.5px; color:#C7D2C7; line-height:1.4;}
+
+  /* ---------- Sobre ---------- */
+  .about{display:grid; grid-template-columns:0.85fr 1.15fr; gap:60px; align-items:center;}
+  @media(max-width:900px){ .about{grid-template-columns:1fr; gap:36px;} }
+  .about-photo{position:relative;}
+  .about-photo img{width:100%; height:460px; object-fit:cover; background:#e2e8e0; border-radius:2px;}
+  .about-photo-tag{
+    position:absolute; bottom:-18px; right:-18px; background:var(--gold); color:#1B211C;
+    padding:16px 20px; font-family:'Fraunces',serif; font-weight:600; font-size:15px; max-width:190px;
+    box-shadow:0 12px 28px -8px rgba(27,33,28,0.25);
+  }
+  @media(max-width:900px){ .about-photo img{height:340px;} .about-photo-tag{right:0;} }
+  .about-copy h2{font-size:clamp(26px,3.2vw,36px); color:var(--pine); max-width:18ch;}
+  .about-copy p{margin-top:20px; color:var(--ink-soft); font-size:16px; max-width:56ch; line-height:1.7;}
+  .about-stats{display:flex; gap:36px; margin-top:32px; flex-wrap:wrap;}
+  .about-stats div strong{display:block; font-family:'Fraunces',serif; font-size:30px; color:var(--pine);}
+  .about-stats div span{font-size:13px; color:var(--ink-soft);}
+
+  /* ---------- Avaliações ---------- */
+  .reviews-panel{
+    background:var(--card); border:1px solid var(--line);
+    padding:52px 48px; display:grid; grid-template-columns:auto 1fr auto; gap:40px; align-items:center;
+    box-shadow:0 18px 45px -25px rgba(27,33,28,0.15);
+  }
+  @media(max-width:820px){ .reviews-panel{grid-template-columns:1fr; text-align:center; padding:40px 26px;} }
+  .stars{display:flex; gap:4px; justify-content:flex-start;}
+  @media(max-width:820px){ .stars{justify-content:center;} }
+  .stars svg{width:22px; height:22px; fill:var(--gold);}
+  .reviews-badge{display:block; margin-top:8px; font-size:13px; font-weight:700; color:var(--gold); letter-spacing:0.04em;}
+  .reviews-copy h3{font-family:'Fraunces',serif; font-size:22px; color:var(--pine);}
+  .reviews-copy p{margin-top:8px; color:var(--ink-soft); font-size:14.5px; max-width:48ch; line-height:1.6;}
+  .reviews-actions{display:flex; flex-direction:column; gap:10px;}
+  .reviews-actions .btn{justify-content:center;}
+
+  /* ---------- Localização ---------- */
+  .location-grid{display:grid; grid-template-columns:1fr 1fr; gap:0; border:1px solid var(--line); background:var(--card);}
+  @media(max-width:860px){ .location-grid{grid-template-columns:1fr;} }
+  .location-map iframe{width:100%; height:100%; min-height:380px; border:0; display:block; filter:grayscale(0.15) contrast(1.05);}
+  .location-info{padding:48px 44px; background:var(--card);}
+  .location-info h3{font-family:'Fraunces',serif; font-size:24px; color:var(--pine);}
+  .location-info .addr{margin-top:18px; font-size:15.5px; color:var(--ink); line-height:1.6;}
+  .location-info .addr b{display:block; font-size:12px; letter-spacing:0.08em; color:var(--gold); text-transform:uppercase; margin-bottom:6px; font-weight:700;}
+  .location-list{margin-top:26px; display:flex; flex-direction:column; gap:14px; font-size:14.5px; color:var(--ink-soft);}
+  .location-list strong{color:var(--ink);}
+  .location-actions{margin-top:30px; display:flex; gap:12px; flex-wrap:wrap;}
+
+  /* ---------- Final CTA ---------- */
+  .final-cta{
+    background:var(--pine); color:#F4EFDD; text-align:center; padding:100px 0;
+    background-image: radial-gradient(circle at 20% 20%, rgba(173,138,70,0.14), transparent 55%);
+  }
+  .final-cta h2{font-size:clamp(30px,4.2vw,50px); max-width:18ch; margin:0 auto;}
+  .final-cta p{margin-top:18px; color:#C7D2C7; font-size:16.5px; max-width:48ch; margin-left:auto; margin-right:auto;}
+  .final-cta .hero-actions{justify-content:center; margin-top:36px;}
+  .final-cta .btn-ghost{border-color:rgba(217,200,154,0.6); color:#F4EFDD;}
+  .final-cta .btn-ghost:hover{border-color:var(--gold-soft); color:var(--gold-soft); background:rgba(217,200,154,0.1);}
+
+  /* ---------- Footer ---------- */
+  footer{background:var(--pine-deep); color:#C7D2C7; padding:60px 0 30px;}
+  .footer-grid{display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:40px;}
+  @media(max-width:760px){ .footer-grid{grid-template-columns:1fr; gap:32px;} }
+  .footer-brand{display:flex; align-items:center; gap:10px; margin-bottom:14px;}
+  .footer-brand .brand-name{color:#F4EFDD;}
+  .footer-brand .brand-name span{color:var(--gold-soft);}
+  footer p{font-size:14px; max-width:34ch; line-height:1.6;}
+  footer h4{font-family:'Manrope',sans-serif; font-size:13px; color:#F4EFDD; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:16px; font-weight:700;}
+  footer ul{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:11px;}
+  footer a{text-decoration:none; font-size:14.5px; color:#C7D2C7; transition:color .15s ease;}
+  footer a:hover{color:var(--gold-soft);}
+  .footer-bottom{
+    margin-top:52px; padding-top:24px; border-top:1px solid rgba(199,210,199,0.15);
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; font-size:12.5px; color:#8CA093;
+  }
+
+  /* ---------- Floating WhatsApp ---------- */
+  .float-wa{
+    position:fixed; right:24px; bottom:24px; z-index:60;
+    width:60px; height:60px; border-radius:50%; background:var(--whatsapp);
+    display:flex; align-items:center; justify-content:center;
+    box-shadow:0 10px 30px -6px rgba(0,0,0,0.4);
+    text-decoration:none;
+    animation:pulse-once 2.2s ease-out 1;
+    transition:transform .2s ease;
+  }
+  .float-wa:hover{transform:scale(1.08);}
+  .float-wa svg{width:30px; height:30px; fill:#FFFFFF;}
+  @keyframes pulse-once{
+    0%{box-shadow:0 10px 30px -6px rgba(0,0,0,0.4), 0 0 0 0 rgba(34,195,94,0.6);}
+    70%{box-shadow:0 10px 30px -6px rgba(0,0,0,0.4), 0 0 0 18px rgba(34,195,94,0);}
+    100%{box-shadow:0 10px 30px -6px rgba(0,0,0,0.4), 0 0 0 0 rgba(34,195,94,0);}
+  }
+
+  /* ---------- Mobile menu ---------- */
+  .mobile-menu{
+    display:none; position:fixed; inset:0; background:var(--bg); z-index:70;
+    padding:24px; flex-direction:column;
+  }
+  .mobile-menu.open{display:flex;}
+  .mobile-menu-top{display:flex; justify-content:space-between; align-items:center;}
+  .mobile-menu ul{list-style:none; padding:0; margin:50px 0 0; display:flex; flex-direction:column; gap:26px;}
+  .mobile-menu a{font-family:'Fraunces',serif; font-size:26px; text-decoration:none; color:var(--ink); transition:color .2s ease;}
+  .mobile-menu a:hover{color:var(--gold);}
+  .mobile-close{background:none; border:none; font-size:32px; cursor:pointer; color:var(--ink); line-height:1;}
+
+  ::selection{background:var(--gold-soft);}
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important; scroll-behavior:auto !important;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="brand">
+      <svg class="brand-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="1.5" y="1.5" width="37" height="37" stroke="#AD8A46" stroke-width="1.3"/>
+        <path d="M20 12c-3.2 0-5.6 1.7-5.6 4.7 0 2 .9 3 1.4 4.9.5 1.9.6 5.6 2.2 5.6 1.4 0 1-4.3 2-4.3s.6 4.3 2 4.3c1.6 0 1.7-3.7 2.2-5.6.5-1.9 1.4-2.9 1.4-4.9 0-3-2.4-4.7-5.6-4.7z" stroke="#AD8A46" stroke-width="1.3" stroke-linejoin="round"/>
+      </svg>
+      <span class="brand-name">Odonto Essencial<span>Reabilitação oral &amp; estética facial</span></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#especialidades">Especialidades</a></li>
+      <li><a href="#transformacoes">Transformações</a></li>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#localizacao">Localização</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="https://wa.me/5511917806631?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20na%20Odonto%20Essencial." target="_blank" rel="noopener">Agendar no WhatsApp</a>
+      <button class="burger" id="burgerBtn" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu-top">
+    <span class="brand-name">Odonto Essencial</span>
+    <button class="mobile-close" id="mobileClose">&times;</button>
+  </div>
+  <ul>
+    <li><a href="#especialidades">Especialidades</a></li>
+    <li><a href="#transformacoes">Transformações</a></li>
+    <li><a href="#sobre">Sobre</a></li>
+    <li><a href="#localizacao">Localização</a></li>
+    <li><a href="https://wa.me/5511917806631?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20na%20Odonto%20Essencial." target="_blank" rel="noopener">Agendar no WhatsApp →</a></li>
+  </ul>
+</div>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <h1>Cuidado odontológico completo, do jeito que Guarulhos merece.</h1>
+        <p class="hero-sub">Da avaliação de rotina à reabilitação oral completa — clínica geral, estética, endodontia, prótese e implantes, tudo com a mesma equipe, em Serodio.</p>
+        <div class="hero-actions">
+          <a class="btn btn-wa" href="https://wa.me/5511917806631?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20na%20Odonto%20Essencial." target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.5-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1.1 2.8 1.2 3c.1.2 2.1 3.3 5.2 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.6 1.4 5.1L2 22l5.1-1.3c1.5.8 3.2 1.3 4.9 1.3 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.6 0-3.1-.4-4.5-1.2l-.3-.2-3.3.9.9-3.2-.2-.3C3.8 14.7 3.3 13.4 3.3 12c0-4.8 3.9-8.7 8.7-8.7s8.7 3.9 8.7 8.7-3.9 8.7-8.7 8.7z"/></svg>
+            Agendar pelo WhatsApp
+          </a>
+          <a class="btn btn-ghost" href="https://www.instagram.com/odontoessencial_/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg>
+            Ver no Instagram
+          </a>
+        </div>
+        <div class="trust-line">
+          <span><b>9</b> áreas de atendimento</span>
+          <span class="dot">·</span>
+          <span>Av. Coqueiral, 314 — Serodio, Guarulhos</span>
+          <span class="dot">·</span>
+          <span>Urgência odontológica</span>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1000&q=80" alt="Consultório odontológico Odonto Essencial em Guarulhos" loading="lazy">
+        <div class="hero-card">
+          <p>Atendimento humanizado</p>
+          <strong>Cuidado dedicado e tecnologia para o seu sorriso</strong>
+        </div>
+      </div>
+    </div>
+
+    <!-- MARQUEE TICKER -->
+    <div class="marquee-strip">
+      <div class="marquee-track">
+        <span>Clínica Geral</span>
+        <span>Estética Dental &amp; Facetas</span>
+        <span>Endodontia (Canal)</span>
+        <span>Prótese Dentária</span>
+        <span>Implantes &amp; Carga Imediata</span>
+        <span>Periodontia</span>
+        <span>Ortodontia &amp; Invisalign</span>
+        <span>Harmonização Orofacial</span>
+        <span>Odontopediatria</span>
+        <span>Clínica Geral</span>
+        <span>Estética Dental &amp; Facetas</span>
+        <span>Endodontia (Canal)</span>
+        <span>Prótese Dentária</span>
+        <span>Implantes &amp; Carga Imediata</span>
+        <span>Periodontia</span>
+        <span>Ortodontia &amp; Invisalign</span>
+        <span>Harmonização Orofacial</span>
+        <span>Odontopediatria</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ESPECIALIDADES -->
+  <section id="especialidades">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Especialidades para cuidar de você por inteiro</h2>
+        <p>De procedimentos preventivos a cirurgias complexas de reabilitação oral, nossa equipe multidisciplinar reúne todas as especialidades no mesmo endereço em Guarulhos.</p>
+      </div>
+
+      <div class="specialties">
+        <!-- Accordion list -->
+        <div class="accordion" id="specialtiesAccordion">
+
+          <div class="accordion-item open">
+            <button class="accordion-btn" type="button">
+              <span><span class="idx">01</span>Clínica Geral &amp; Prevenção</span>
+              <span class="plus"></span>
+            </button>
+            <div class="accordion-panel" style="max-height: 260px;">
+              <div class="accordion-panel-inner">
+                <ul>
+                  <li>Profilaxia (Limpeza profunda)</li>
+                  <li>Check-up preventivo digital</li>
+                  <li>Restaurações estéticas em resina</li>
+                  <li>Aplicação de flúor e selantes</li>
+                  <li>Tratamento de sensibilidade dental</li>
+                  <li>Remoção de tártaro e raspagem</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-btn" type="button">
+              <span><span class="idx">02</span>Estética Dental &amp; Clareamento</span>
+              <span class="plus"></span>
+            </button>
+            <div class="accordion-panel">
+              <div class="accordion-panel-inner">
+                <ul>
+                  <li>Clareamento dental a laser</li>
+                  <li>Clareamento caseiro supervisionado</li>
+                  <li>Lentes de contato dental em porcelana</li>
+                  <li>Facetas em resina composta direta</li>
+                  <li>Fechamento de diastemas</li>
+                  <li>Design digital do sorriso</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-btn" type="button">
+              <span><span class="idx">03</span>Endodontia (Tratamento de Canal)</span>
+              <span class="plus"></span>
+            </button>
+            <div class="accordion-panel">
+              <div class="accordion-panel-inner">
+                <ul>
+                  <li>Instrumentação rotatória moderna</li>
+                  <li>Alívio imediato da dor e infecção</li>
+                  <li>Tratamentos em sessão única</li>
+                  <li>Retratamento endodôntico</li>
+                  <li>Preservação do dente natural</li>
+                  <li>Anestesia computadorizada indolor</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-btn" type="button">
+              <span><span class="idx">04</span>Prótese Dentária &amp; Reabilitação</span>
+              <span class="plus"></span>
+            </button>
+            <div class="accordion-panel">
+              <div class="accordion-panel-inner">
+                <ul>
+                  <li>Coroas em zircônia e porcelana pura</li>
+                  <li>Prótese fixa e sobre implantes</li>
+                  <li>Próteses parciais removíveis</li>
+                  <li>Próteses totais (dentaduras) estéticas</li>
+                  <li>Reabilitação oclusal completa</li>
+                  <li>Placas de bruxismo e miorrelaxantes</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-btn" type="button">
+              <span><span class="idx">05</span>Implantes Dentários</span>
+              <span class="plus"></span>
+            </button>
+            <div class="accordion-panel">
+              <div class="accordion-panel-inner">
+                <ul>
+                  <li>Implantes unitários em titânio</li>
+                  <li>Protocolo All-on-4 e All-on-6</li>
+                  <li>Implantes com carga imediata</li>
+                  <li>Enxertos ósseos e gengivais</li>
+                  <li>Planejamento cirúrgico guiado 3D</li>
+                  <li>Recuperação segura e rápida</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-btn" type="button">
+              <span><span class="idx">06</span>Periodontia (Saúde Gengival)</span>
+              <span class="plus"></span>
+            </button>
+            <div class="accordion-panel">
+              <div class="accordion-panel-inner">
+                <ul>
+                  <li>Tratamento de gengivite e periodontite</li>
+                  <li>Gengivoplastia e plástica gengival</li>
+                  <li>Recobrimento de raiz exposta</li>
+                  <li>Remoção cirúrgica de excesso gengival</li>
+                  <li>Manutenção e controle de sangramento</li>
+                  <li>Tratamento do mau hálito</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-btn" type="button">
+              <span><span class="idx">07</span>Ortodontia &amp; Aparelhos</span>
+              <span class="plus"></span>
+            </button>
+            <div class="accordion-panel">
+              <div class="accordion-panel-inner">
+                <ul>
+                  <li>Alinhadores transparentes (Invisalign)</li>
+                  <li>Aparelhos estéticos (safira e porcelana)</li>
+                  <li>Aparelhos metálicos autoligados</li>
+                  <li>Ortodontia preventiva para jovens</li>
+                  <li>Correção de mordida cruzada e aberta</li>
+                  <li>Contenções fixas e móveis</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-btn" type="button">
+              <span><span class="idx">08</span>Harmonização Orofacial (HOF)</span>
+              <span class="plus"></span>
+            </button>
+            <div class="accordion-panel">
+              <div class="accordion-panel-inner">
+                <ul>
+                  <li>Toxina botulínica (Botox) terapêutico</li>
+                  <li>Preenchimento com ácido hialurônico</li>
+                  <li>Bioestimuladores de colágeno</li>
+                  <li>Controle de sorriso gengival e bruxismo</li>
+                  <li>Lipopapada enzimática</li>
+                  <li>Lipoescultura labial sutil e natural</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-btn" type="button">
+              <span><span class="idx">09</span>Odontopediatria</span>
+              <span class="plus"></span>
+            </button>
+            <div class="accordion-panel">
+              <div class="accordion-panel-inner">
+                <ul>
+                  <li>Abordagem lúdica e sem traumas</li>
+                  <li>Acompanhamento do desenvolvimento</li>
+                  <li>Prevenção de cáries e aplicação de flúor</li>
+                  <li>Orientações de escovação para os pais</li>
+                  <li>Tratamento de traumas e quedas</li>
+                  <li>Cuidado gentil para bebês e crianças</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Sticky feature card -->
+        <div class="feature-card">
+          <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=800&q=80" alt="Aparelho invisível Invisalign alinhador transparente" loading="lazy">
+          <div class="feature-card-body">
+            <p class="kicker">Em destaque</p>
+            <h3>Aparelho invisível</h3>
+            <p>Alinhadores transparentes e removíveis, feitos sob medida a partir de um escaneamento digital do seu sorriso — mais conforto, higiene e discrição a cada etapa do tratamento.</p>
+            <a class="btn btn-primary" href="https://wa.me/5511917806631?text=Ol%C3%A1%21%20Vi%20no%20site%20que%20voc%C3%AAs%20fazem%20aparelho%20invis%C3%ADvel%20%28Invisalign%29%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener">Saber mais</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRANSFORMAÇÕES -->
+  <section id="transformacoes" class="dark-section">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Sorrisos que já mudaram</h2>
+        <p>Alguns resultados reais de pacientes da Odonto Essencial. Arraste a linha para comparar o antes e o depois do tratamento.</p>
+      </div>
+
+      <div class="transform-grid">
+        <div>
+          <div class="compare" id="compare1">
+            <img class="before-img" src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=1000&q=80" alt="Sorriso antes do tratamento" loading="lazy">
+            <img class="after-img" id="compareAfter" src="https://images.unsplash.com/photo-1588776814546-daab30f310ce?auto=format&fit=crop&w=1000&q=80" alt="Sorriso após o tratamento estético" loading="lazy">
+            <div class="compare-handle" id="compareHandle"></div>
+            <span class="compare-tag before">Antes</span>
+            <span class="compare-tag after">Depois</span>
+          </div>
+          <p class="compare-caption"><strong>Reabilitação estética e funcional</strong> — Lentes de contato dental em porcelana, clareamento e alinhamento oclusal.</p>
+        </div>
+
+        <div class="transform-mini-grid">
+          <div>
+            <div class="static-photo">
+              <img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=600&q=80" alt="Implantes dentários e prótese fixa" loading="lazy">
+            </div>
+            <p class="static-photo-cap">Implantes dentários &amp; prótese fixa</p>
+          </div>
+          <div>
+            <div class="static-photo">
+              <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=600&q=80" alt="Clareamento dental a laser" loading="lazy">
+            </div>
+            <p class="static-photo-cap">Clareamento dental &amp; facetas</p>
+          </div>
+          <div>
+            <div class="static-photo">
+              <img src="https://images.unsplash.com/photo-1571772996211-2f02c9727629?auto=format&fit=crop&w=600&q=80" alt="Ortodontia e alinhadores invisíveis" loading="lazy">
+            </div>
+            <p class="static-photo-cap">Ortodontia com alinhadores</p>
+          </div>
+          <div>
+            <div class="static-photo">
+              <img src="https://images.unsplash.com/photo-1512290900672-1f55b9a7101a?auto=format&fit=crop&w=600&q=80" alt="Harmonização orofacial sutil" loading="lazy">
+            </div>
+            <p class="static-photo-cap">Harmonização orofacial sutil</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section id="sobre">
+    <div class="wrap about">
+      <div class="about-photo">
+        <img src="https://images.unsplash.com/photo-1629909615184-74f495363b67?auto=format&fit=crop&w=800&q=80" alt="Equipe e estrutura da clínica Odonto Essencial" loading="lazy">
+        <div class="about-photo-tag">
+          Odontologia humanizada e de precisão
+        </div>
+      </div>
+      <div class="about-copy">
+        <h2>Excelência clínica, cuidado humano e foco no seu bem-estar.</h2>
+        <p>Acreditamos que cuidar do sorriso vai muito além de procedimentos técnicos: trata-se de devolver segurança, autoestima e qualidade de vida a cada paciente.</p>
+        <p>Localizada no coração de Serodio, em Guarulhos, a <strong>Odonto Essencial</strong> foi planejada para oferecer um ambiente calmo, seguro e moderno, com equipamentos de última geração e protocolos rigorosos de biossegurança.</p>
+        <div class="about-stats">
+          <div>
+            <strong>9</strong>
+            <span>Especialidades integradas</span>
+          </div>
+          <div>
+            <strong>+1.500</strong>
+            <span>Sorrisos transformados</span>
+          </div>
+          <div>
+            <strong>5.0 ★</strong>
+            <span>Avaliação média Google</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AVALIAÇÕES -->
+  <section id="avaliacoes" style="padding-top:0;">
+    <div class="wrap">
+      <div class="reviews-panel">
+        <div>
+          <div class="stars">
+            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          </div>
+          <span class="reviews-badge">5.0 no Google Avaliações</span>
+        </div>
+        <div class="reviews-copy">
+          <h3>"Atendimento impecável do início ao fim"</h3>
+          <p>"A clínica é moderna, os profissionais explicam cada etapa com paciência e o procedimento foi completamente sem dor. Recuperei a vontade de sorrir com total confiança!"</p>
+        </div>
+        <div class="reviews-actions">
+          <a class="btn btn-primary" href="https://wa.me/5511917806631?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20na%20Odonto%20Essencial." target="_blank" rel="noopener">Agendar consulta</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCALIZAÇÃO -->
+  <section id="localizacao">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Fácil acesso em Guarulhos</h2>
+        <p>Localização privilegiada na Avenida Coqueiral em Serodio, com estacionamento facilitado e ponto de referência acessível.</p>
+      </div>
+
+      <div class="location-grid">
+        <div class="location-map">
+          <iframe 
+            title="Mapa de localização Odonto Essencial"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3661.168759323537!2d-46.46743952378824!3d-23.41829095642456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce8b99c0da98ff%3A0x7d2cb91b9b1e7ff2!2sAv.%20Coqueiral%2C%20314%20-%20Vila%20Serodio%2C%20Guarulhos%20-%20SP%2C%2007150-100!5e0!3m2!1spt-BR!2sbr!4v1715000000000!5m2!1spt-BR!2sbr" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+        <div class="location-info">
+          <h3>Odonto Essencial</h3>
+          <div class="addr">
+            <b>Endereço</b>
+            Av. Coqueiral, 314 — Serodio, Guarulhos - SP<br>
+            CEP: 07150-100
+          </div>
+          <div class="location-list">
+            <div><strong>Horário de Atendimento:</strong><br>Segunda a Sexta: 08h às 19h<br>Sábados: 08h às 13h</div>
+            <div><strong>WhatsApp / Telefone:</strong><br>(11) 91780-6631</div>
+            <div><strong>Atendimento de Urgência:</strong><br>Consulte disponibilidade via WhatsApp</div>
+          </div>
+          <div class="location-actions">
+            <a class="btn btn-wa" href="https://wa.me/5511917806631?text=Ol%C3%A1%21%20Preciso%20de%20informa%C3%A7%C3%B5es%20sobre%20localiza%C3%A7%C3%A3o%20e%20agendamento." target="_blank" rel="noopener">
+              Conversar no WhatsApp
+            </a>
+            <a class="btn btn-ghost" href="https://maps.google.com/?q=Av.+Coqueiral,+314+-+Serodio,+Guarulhos+-+SP" target="_blank" rel="noopener">
+              Como Chegar (Maps)
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final-cta">
+    <div class="wrap">
+      <h2>Pronto para transformar o seu sorriso?</h2>
+      <p>Dê o primeiro passo hoje mesmo. Nossa equipe está pronta para receber você com toda a atenção e planejar o tratamento ideal para suas necessidades.</p>
+      <div class="hero-actions">
+        <a class="btn btn-wa" href="https://wa.me/5511917806631?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20minha%20avalia%C3%A7%C3%A3o%20pelo%20site." target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.5-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1.1 2.8 1.2 3c.1.2 2.1 3.3 5.2 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.6 1.4 5.1L2 22l5.1-1.3c1.5.8 3.2 1.3 4.9 1.3 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.6 0-3.1-.4-4.5-1.2l-.3-.2-3.3.9.9-3.2-.2-.3C3.8 14.7 3.3 13.4 3.3 12c0-4.8 3.9-8.7 8.7-8.7s8.7 3.9 8.7 8.7-3.9 8.7-8.7 8.7z"/></svg>
+          Agendar pelo WhatsApp
+        </a>
+        <a class="btn btn-ghost" href="https://www.instagram.com/odontoessencial_/" target="_blank" rel="noopener">
+          Acompanhar no Instagram
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <svg class="brand-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="1.5" y="1.5" width="37" height="37" stroke="#D9C89A" stroke-width="1.3"/>
+            <path d="M20 12c-3.2 0-5.6 1.7-5.6 4.7 0 2 .9 3 1.4 4.9.5 1.9.6 5.6 2.2 5.6 1.4 0 1-4.3 2-4.3s.6 4.3 2 4.3c1.6 0 1.7-3.7 2.2-5.6.5-1.9 1.4-2.9 1.4-4.9 0-3-2.4-4.7-5.6-4.7z" stroke="#D9C89A" stroke-width="1.3" stroke-linejoin="round"/>
+          </svg>
+          <span class="brand-name">Odonto Essencial<span>Reabilitação oral &amp; estética facial</span></span>
+        </div>
+        <p>Cuidado odontológico completo e humanizado em Guarulhos. Tecnologia de ponta, equipe especializada e dedicação ao seu bem-estar.</p>
+      </div>
+      <div>
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="#top">Início</a></li>
+          <li><a href="#especialidades">Especialidades</a></li>
+          <li><a href="#transformacoes">Transformações</a></li>
+          <li><a href="#sobre">Sobre a Clínica</a></li>
+          <li><a href="#localizacao">Onde Estamos</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contato &amp; Local</h4>
+        <ul>
+          <li>Av. Coqueiral, 314 — Serodio, Guarulhos</li>
+          <li>WhatsApp: (11) 91780-6631</li>
+          <li>Instagram: @odontoessencial_</li>
+          <li>Seg a Sex: 08h às 19h | Sáb: 08h às 13h</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Odonto Essencial. Todos os direitos reservados.</span>
+      <span>Responsável Técnico registrado no CRO-SP — Serodio, Guarulhos - SP.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- FLOATING WHATSAPP -->
+<a class="float-wa" href="https://wa.me/5511917806631?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida." target="_blank" rel="noopener" aria-label="Falar pelo WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.5-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1.1 2.8 1.2 3c.1.2 2.1 3.3 5.2 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.6 1.4 5.1L2 22l5.1-1.3c1.5.8 3.2 1.3 4.9 1.3 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.6 0-3.1-.4-4.5-1.2l-.3-.2-3.3.9.9-3.2-.2-.3C3.8 14.7 3.3 13.4 3.3 12c0-4.8 3.9-8.7 8.7-8.7s8.7 3.9 8.7 8.7-3.9 8.7-8.7 8.7z"/></svg>
+</a>
+
+<!-- JAVASCRIPT LOGIC -->
+<script>
+  // 1. Mobile Menu Toggle
+  const burgerBtn = document.getElementById('burgerBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const mobileClose = document.getElementById('mobileClose');
+
+  if (burgerBtn && mobileMenu) {
+    burgerBtn.addEventListener('click', () => {
+      mobileMenu.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    });
+  }
+
+  function closeMobileNav() {
+    if (mobileMenu) {
+      mobileMenu.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+  }
+
+  if (mobileClose) {
+    mobileClose.addEventListener('click', closeMobileNav);
+  }
+
+  // Close mobile menu on any link click
+  document.querySelectorAll('.mobile-menu a').forEach(link => {
+    link.addEventListener('click', closeMobileNav);
+  });
+
+  // 2. Accordion Interactive Toggle
+  const accordionItems = document.querySelectorAll('.accordion-item');
+  accordionItems.forEach(item => {
+    const btn = item.querySelector('.accordion-btn');
+    const panel = item.querySelector('.accordion-panel');
+
+    if (btn && panel) {
+      btn.addEventListener('click', () => {
+        const isOpen = item.classList.contains('open');
+
+        // Close other open items for single-item view
+        accordionItems.forEach(otherItem => {
+          if (otherItem !== item && otherItem.classList.contains('open')) {
+            otherItem.classList.remove('open');
+            const otherPanel = otherItem.querySelector('.accordion-panel');
+            if (otherPanel) otherPanel.style.maxHeight = '0px';
+          }
+        });
+
+        if (isOpen) {
+          item.classList.remove('open');
+          panel.style.maxHeight = '0px';
+        } else {
+          item.classList.add('open');
+          panel.style.maxHeight = panel.scrollHeight + 'px';
+        }
+      });
+    }
+  });
+
+  // 3. Before/After Comparison Slider (Mouse + Touch)
+  const compareBox = document.getElementById('compare1');
+  const compareAfter = document.getElementById('compareAfter');
+  const compareHandle = document.getElementById('compareHandle');
+
+  if (compareBox && compareAfter && compareHandle) {
+    let isDragging = false;
+
+    function setComparePosition(clientX) {
+      const rect = compareBox.getBoundingClientRect();
+      let x = clientX - rect.left;
+      let percentage = (x / rect.width) * 100;
+
+      // Clamp between 0% and 100%
+      percentage = Math.max(0, Math.min(100, percentage));
+
+      // Clip path cuts from left edge
+      compareAfter.style.clipPath = `inset(0 0 0 ${percentage}%)`;
+      compareHandle.style.left = `${percentage}%`;
+    }
+
+    // Mouse Events
+    compareBox.addEventListener('mousedown', (e) => {
+      isDragging = true;
+      setComparePosition(e.clientX);
+    });
+
+    window.addEventListener('mousemove', (e) => {
+      if (!isDragging) return;
+      setComparePosition(e.clientX);
+    });
+
+    window.addEventListener('mouseup', () => {
+      isDragging = false;
+    });
+
+    // Touch Events
+    compareBox.addEventListener('touchstart', (e) => {
+      isDragging = true;
+      if (e.touches && e.touches[0]) {
+        setComparePosition(e.touches[0].clientX);
+      }
+    }, { passive: true });
+
+    window.addEventListener('touchmove', (e) => {
+      if (!isDragging) return;
+      if (e.touches && e.touches[0]) {
+        setComparePosition(e.touches[0].clientX);
+      }
+    }, { passive: true });
+
+    window.addEventListener('touchend', () => {
+      isDragging = false;
+    });
+  }
+</script>
+
+</body>
+</html>
